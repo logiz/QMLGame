@@ -21,90 +21,110 @@ ApplicationWindow {
         }
     }
 
-    Row {
-        id: row2
-        x: 115
-        y: 92
-        width: 371
-        height: 230
+    Text {
+        id: textLogin
+        x: 231
+        y: 30
+        text: qsTr("Your Login")
+        font.pixelSize: 12
+    }
 
 
-        ListView {
-            id: listView1
-            width: 110
-            height: 160
-            delegate: Item {
-                x: 5
-                width: 100
-                height: 20
-                Row {
-                    id: row1
+    ProgressBar {
+        id: progressBar1
+        x: 11
+        y: 186
+        width: 93
+        height: 23
+        orientation: 1
+        value: 2
+        maximumValue: 10
+    }
 
-                    Text {
-                        text: score
-                        font.bold: true
-                        anchors.verticalCenter: parent.verticalCenter
-                    }
+    ListView {
+        id: listView1
+        x: 0
+        y: 11
+        width: 110
+        height: 169
+        delegate: Item {
+            x: 5
+            width: 100
+            height: 20
+            Row {
+                id: row1
 
-                    Text {
-                        text: name
-                        font.bold: false
-                        anchors.verticalCenter: parent.verticalCenter
-                    }                    
-
-                    spacing: 10
-                }
-            }
-            model: ListModel {
-                ListElement {
-                    name: "Grey"
-                    score: "1"
-                }
-
-                ListElement {
-                    name: "Red"
-                    score: "3"
+                Text {
+                    text: score
+                    font.bold: true
+                    anchors.verticalCenter: parent.verticalCenter
                 }
 
-                ListElement {
-                    name: "Blue"
-                    score: "12"
+                Text {
+                    text: name
+                    font.bold: false
+                    anchors.verticalCenter: parent.verticalCenter
                 }
 
-                ListElement {
-                    name: "Green"
-                    score: "16"
-                }
+                spacing: 10
             }
         }
-        Column {
-            id: column1
-            width: 200
-            height: 400
+        model: ListModel {
+            ListElement {
+                name: "Grey"
+                score: "1"
+            }
+
+            ListElement {
+                name: "Red"
+                score: "3"
+            }
+
+            ListElement {
+                name: "Blue"
+                score: "12"
+            }
+
+            ListElement {
+                name: "Green"
+                score: "16"
+            }
+        }
+    }
+
+        Grid {
+            id: grid1
+            x: 305
+            y: 280
+            width: 313
+            height: 131
 
             Button {
                 id: buttonUp
+                width: 75
+                height: 64
                 text: qsTr("up")
             }
 
             Button {
                 id: buttonDown
+                width: 75
+                height: 67
                 text: qsTr("down")
             }
 
             Button {
-                id: buttonRight
-                text: qsTr("right")
-            }
-
-            Button {
                 id: buttonLeft
+                width: 75
+                height: 69
                 text: qsTr("left")
             }
 
-            ProgressBar {
-                id: progressBar1
+            Button {
+                id: buttonRight
+                width: 75
+                height: 69
+                text: qsTr("right")
             }
         }
-    }
 }
