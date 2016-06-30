@@ -35,8 +35,8 @@ ApplicationWindow {
             height: 160
             delegate: Item {
                 x: 5
-                width: 80
-                height: 40
+                width: 100
+                height: 20
                 Row {
                     id: row1
                     Rectangle {
@@ -81,18 +81,23 @@ ApplicationWindow {
             height: 400
 
             Button {
-                id: button1
-                text: qsTr("Button")
+                id: buttonUp
+                text: qsTr("up")
             }
 
             Button {
-                id: button2
-                text: qsTr("Button")
+                id: buttonDown
+                text: qsTr("down")
             }
 
             Button {
-                id: button3
-                text: qsTr("Button")
+                id: buttonRight
+                text: qsTr("right")
+            }
+
+            Button {
+                id: buttonLeft
+                text: qsTr("left")
             }
 
             ProgressBar {
