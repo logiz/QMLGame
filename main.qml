@@ -39,39 +39,41 @@ ApplicationWindow {
                 height: 20
                 Row {
                     id: row1
-                    Rectangle {
-                        width: 40
-                        height: 40
-                        color: colorCode
+
+                    Text {
+                        text: score
+                        font.bold: true
+                        anchors.verticalCenter: parent.verticalCenter
                     }
 
                     Text {
                         text: name
-                        font.bold: true
+                        font.bold: false
                         anchors.verticalCenter: parent.verticalCenter
-                    }
+                    }                    
+
                     spacing: 10
                 }
             }
             model: ListModel {
                 ListElement {
                     name: "Grey"
-                    colorCode: "grey"
+                    score: "1"
                 }
 
                 ListElement {
                     name: "Red"
-                    colorCode: "red"
+                    score: "3"
                 }
 
                 ListElement {
                     name: "Blue"
-                    colorCode: "blue"
+                    score: "12"
                 }
 
                 ListElement {
                     name: "Green"
-                    colorCode: "green"
+                    score: "16"
                 }
             }
         }
